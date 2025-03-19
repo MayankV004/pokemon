@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { ArrowLeft, ChevronRight, Info, Heart, Activity, Award, Zap } from "lucide-react";
+import { ArrowLeft, ChevronRight, Info, Activity, Zap } from "lucide-react";
 import Link from "next/link";
 
 // Types
@@ -147,7 +147,7 @@ const PokemonDetailPage = () => {
           
           // Process evolution chain
           const evoChain: string[] = [];
-          let currentEvo = evolutionData.chain;
+          const currentEvo = evolutionData.chain;
           
           // Add first form
           evoChain.push(currentEvo.species.name);

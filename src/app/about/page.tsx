@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Github, ExternalLink, Code, Database, Layout, MessageSquare } from "lucide-react";
+import {  Code, Database, Layout, MessageSquare } from "lucide-react";
 
 const AboutPage = () => {
   return (

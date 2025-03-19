@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 
 // Type colors from your existing code
 const typeColors: Record<string, string> = {
