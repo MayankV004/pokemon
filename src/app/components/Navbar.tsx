@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
               <div className="relative bg-gray-900 rounded-full p-1.5">
-                <Image src="/pokeball.png" alt="pokeball" className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                <Image src="/pokeball.png" alt="pokeball" width={7} height={7} className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
               </div>
             </div>
             <Link href="/" className="flex items-center">

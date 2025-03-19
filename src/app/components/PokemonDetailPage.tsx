@@ -112,7 +112,6 @@ const PokemonDetailPage = () => {
 
   const [pokemon, setPokemon] = useState<PokemonDetail | null>(null);
   const [species, setSpecies] = useState<PokemonSpecies | null>(null);
-  const [evolutions, setEvolutions] = useState<string[]>([]);
   const [evolutionDetails, setEvolutionDetails] = useState<{id: number, name: string, image: string}[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -147,7 +146,7 @@ const PokemonDetailPage = () => {
           
           // Process evolution chain
           const evoChain: string[] = [];
-          const currentEvo = evolutionData.chain;
+          let currentEvo = evolutionData.chain;
           
           // Add first form
           evoChain.push(currentEvo.species.name);
@@ -165,8 +164,6 @@ const PokemonDetailPage = () => {
               }
             });
           }
-          
-          setEvolutions(evoChain);
           
           // Fetch details for each evolution
           const evoDetailsPromises = evoChain.map(async (evoName) => {
